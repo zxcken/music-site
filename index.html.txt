@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный сайт</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+        }
+        .image-container {
+            cursor: pointer;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container" onclick="playMusic()">
+        <img src="image.jpg" alt="Нажми, чтобы включить музыку">
+    </div>
+    <audio id="song" src="song.mp3"></audio>
+
+    <script>
+        function playMusic() {
+            let song = document.getElementById("song");
+            song.play();
+        }
+    </script>
+
+</body>
+</html>
